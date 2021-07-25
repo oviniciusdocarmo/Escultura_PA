@@ -164,7 +164,7 @@ void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
     for (int i = x0; i < x1; i++){
         for (int j = y0; j < y1; j++){
             for (int k = z0; k < z1; k++){
-                if (SatisfEquacaoEllipsoid(i,j,k,xcenter,ycenter,zcenter,rx,rx,rz)){
+                if (SatisfEquacaoEllipsoid(i,j,k,xcenter,ycenter,zcenter,rx,ry,rz)){
                     putVoxel(i, j, k);
                 }
             }
@@ -186,7 +186,7 @@ void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
     for (int i = x0; i < x1; i++){
         for (int j = y0; j < y1; j++){
             for (int k = z0; k < z1; k++){
-                if (SatisfEquacaoEllipsoid(i,j,k,xcenter,ycenter,zcenter,rx,rx,rz)){
+                if (SatisfEquacaoEllipsoid(i,j,k,xcenter,ycenter,zcenter,rx,ry,rz)){
                     cutVoxel(i, j, k);
                 }
             }
